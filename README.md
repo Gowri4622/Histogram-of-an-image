@@ -35,20 +35,6 @@ Display the grayscale image.
 # Write your code to find the histogram of gray scale image and color image channels.
 import cv2
 import matplotlib.pyplot as plt
-Color_image=cv2.imread('dog.jpg')
-plt.imshow(Color_image)
-plt.show()
-hist1=cv2.calcHist([Color_image],[1],None,[256],[0,256])
-plt.figure()
-plt.title("Histogram")
-plt.xlabel('Intensity value')
-plt.ylabel('pixel count')
-plt.stem(hist1)
-plt.show()
-
-
-
-# Display the histogram of gray scale image and any one channel histogram from color image
 Gray_image=cv2.imread('parrot.png')
 plt.imshow(Gray_image)
 plt.show()
@@ -58,6 +44,21 @@ plt.title("Histogram")
 plt.xlabel('grayscale value')
 plt.ylabel('pixel count')
 plt.stem(hist)
+plt.show()
+
+
+# Display the histogram of gray scale image and any one channel histogram from color image
+import cv2
+import matplotlib.pyplot as plt
+Color_image=cv2.imread('dog.jpg')
+plt.imshow(Color_image)
+plt.show()
+hist1=cv2.calcHist([Color_image],[1],None,[256],[0,256])
+plt.figure()
+plt.title("Histogram")
+plt.xlabel('Intensity value')
+plt.ylabel('pixel count')
+plt.stem(hist1)
 plt.show()
 
 
